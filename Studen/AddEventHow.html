@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            AddEventHow
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="files/resources/themes/winter/winter.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.2.0/jquery.mobile.structure-1.2.0.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.indexOf("Android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.2.0/jquery.mobile-1.2.0.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery-ui-map/jquery.ui.map.full.min.js">
+        </script>
+        <link href="files/resources/lib/datepicker/jquery.ui.datepicker.mobile.css" rel="stylesheet"
+        type="text/css" />
+        <script type="text/javascript" src="files/resources/lib/datepicker/jQuery.ui.datepicker.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/datepicker/jquery.ui.datepicker.mobile.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/tiggzi.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/Places.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        $(document).bind("mobileinit", function()
+        {
+            $.mobile.page.prototype.options.degradeInputs.date = true;
+        });
+        </script>
+        <div data-role="page" style="min-height:800px;" dsid="AddEventHow" id="j_94" class="type-interior"
+        data-theme="c">
+            <div data-role="header" data-position="fixed" data-theme="c" name="mobileheader5"
+            id="j_96" class=' mobileheader4 '>
+                <h1 dsid="mobileheader5">
+                    Plan
+                </h1>
+            </div>
+            <!-- mobilecontainer5 -->
+            <div data-role="content" id="j_97" name="mobilecontainer5" class="mobilecontainer4"
+            dsid="mobilecontainer5" data-theme='c'>
+                <link href="AddEventHow.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="AddEventHow.js">
+                </script>
+                <!-- mobilelabel6 -->
+                <div name="mobilelabel6" id="j_98" dsid="mobilelabel6" data-role="tiggr_label" class=' mobilelabel28 '>
+                    Goal
+                </div>
+                <!-- mobiletextinput12 -->
+                <div data-role="fieldcontain" class="mobiletextinput6 ">
+                    <input type="text" name="mobiletextinput12" dsid="mobiletextinput12" id="j_99" placeholder="Goal of the study session..."
+                    tabIndex="2" data-theme="c" class=' mobiletextinput6 ' />
+                </div>
+                <!-- mobilespacer8 -->
+                <div id='j_100' dsid="mobilespacer8" class='mobilespacer mobilespacer7'>
+                </div>
+                <!-- mobilelabel7 -->
+                <div name="mobilelabel7" id="j_101" dsid="mobilelabel7" data-role="tiggr_label"
+                class=' mobilelabel29 '>
+                    Schedule
+                </div>
+                <!-- mobiletextarea2 -->
+                <div data-role="fieldcontain" class="mobiletextarea2 ">
+                    <textarea name="mobiletextarea2" id="j_102" tabIndex="1" dsid="mobiletextarea2"
+                    data-theme="c" class=' mobiletextarea2 '>Breakdown of time...
+</textarea>
+                </div>
+                <!-- mobilespacer9 -->
+                <div id='j_103' dsid="mobilespacer9" class='mobilespacer mobilespacer8'>
+                </div>
+                <!-- mobilelabel16 -->
+                <div name="mobilelabel16" id="j_104" dsid="mobilelabel16" data-role="tiggr_label"
+                class=' mobilelabel30 '>
+                    Resources I have...
+                </div>
+                <!-- mobiletextarea8 -->
+                <div data-role="fieldcontain" class="mobiletextarea3 ">
+                    <textarea name="mobiletextarea8" id="j_105" tabIndex="5" dsid="mobiletextarea8"
+                    data-theme="c" class=' mobiletextarea3 '>
+</textarea>
+                </div>
+                <!-- mobilespacer10 -->
+                <div id='j_106' dsid="mobilespacer10" class='mobilespacer mobilespacer9'>
+                </div>
+                <!-- mobilelabel18 -->
+                <div name="mobilelabel18" id="j_107" dsid="mobilelabel18" data-role="tiggr_label"
+                class=' mobilelabel31 '>
+                    Resources I need...
+                </div>
+                <!-- mobiletextarea11 -->
+                <div data-role="fieldcontain" class="mobiletextarea4 ">
+                    <textarea name="mobiletextarea11" id="j_108" tabIndex="6" dsid="mobiletextarea11"
+                    data-theme="c" class=' mobiletextarea4 '>
+</textarea>
+                </div>
+                <!-- mobilebutton30 -->
+                <a data-role="button" name="mobilebutton30" dsid="mobilebutton30" class=' mobilebutton10'
+                id='j_109' data-icon='arrow-r' data-iconpos='right' data-inline='true' data-theme="c"
+                tabIndex="7">
+                Next
+                </a>
+                <!-- mobilebutton33 -->
+                <a data-role="button" name="mobilebutton33" dsid="mobilebutton33" class=' mobilebutton11'
+                id='j_110' data-icon='delete' data-iconpos='left' data-inline='true' data-theme="c"
+                tabIndex="7">
+                Cancel
+                </a>
+                <!-- mobilebutton35 -->
+                <a data-role="button" name="mobilebutton35" dsid="mobilebutton35" class=' mobilebutton12'
+                id='j_111' data-icon='arrow-l' data-iconpos='left' data-inline='true' data-theme="c"
+                tabIndex="7">
+                Back
+                </a>
+                <!-- mobilelabel16 -->
+                <div name="mobilelabel16" id="j_112" dsid="mobilelabel16" data-role="tiggr_label"
+                class=' mobilelabel32 '>
+                    Resources
+                </div>
+            </div>
+            <!-- mobilefooter5 -->
+            <div data-role="footer" data-position="fixed" class="mobilefooter4" name="mobilefooter5"
+            dsid="mobilefooter5" id="j_113" data-theme="c">
+            </div>
+        </div>
+    </body>
+
+</html>

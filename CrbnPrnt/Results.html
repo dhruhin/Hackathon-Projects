@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            Results
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="files/resources/themes/dark-gray/dark-gray.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.2.0/jquery.mobile.structure-1.2.0.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.indexOf("Android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.2.0/jquery.mobile-1.2.0.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/tiggzi.js">
+        </script>
+        <script type="text/javascript" src="http://flot.googlecode.com/svn/trunk/jquery.flot.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/Points.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/cityTotals.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="Results" id="j_0" class="type-interior"
+        data-theme="b" data-add-back-btn="false" data-back-btn-text="Back">
+            <div data-role="header" data-position="fixed" data-theme="b" name="mobileheader3"
+            id="j_2" class=' mobileheader1 '>
+                <h1 dsid="mobileheader3">
+                    Results
+                </h1>
+            </div>
+            <!-- mobilecontainer3 -->
+            <div data-role="content" id="j_3" name="mobilecontainer3" class="mobilecontainer1"
+            dsid="mobilecontainer3" data-theme='b'>
+                <link href="Results.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="Results.js">
+                </script>
+                <!-- mobileimage3 -->
+                <img class="mobileimage1" src="files/views/assets/image/newdesign.png" id="j_4"
+                dsid="mobileimage3" name="mobileimage3" />
+                <!-- mobilelabel74 -->
+                <div name="mobilelabel74" id="j_5" dsid="mobilelabel74" data-role="tiggr_label"
+                class=' mobilelabel1 '>
+                    Personal
+                </div>
+                <!-- mobilelabel86 -->
+                <div name="mobilelabel86" id="j_6" dsid="mobilelabel86" data-role="tiggr_label"
+                class=' mobilelabel2 '>
+                    Transportation
+                </div>
+                <!-- tra1 -->
+                <div name="tra1" id="j_7" dsid="tra1" data-role="tiggr_label" class=' mobilelabel3 '>
+                </div>
+                <!-- mobilelabel87 -->
+                <div name="mobilelabel87" id="j_8" dsid="mobilelabel87" data-role="tiggr_label"
+                class=' mobilelabel4 '>
+                    Electricity
+                </div>
+                <!-- ele1 -->
+                <div name="ele1" id="j_9" dsid="ele1" data-role="tiggr_label" class=' mobilelabel5 '>
+                </div>
+                <!-- mobilelabel88 -->
+                <div name="mobilelabel88" id="j_10" dsid="mobilelabel88" data-role="tiggr_label"
+                class=' mobilelabel6 '>
+                    Resources
+                </div>
+                <!-- res1 -->
+                <div name="res1" id="j_11" dsid="res1" data-role="tiggr_label" class=' mobilelabel7 '>
+                </div>
+                <!-- mobilelabel75 -->
+                <div name="mobilelabel75" id="j_12" dsid="mobilelabel75" data-role="tiggr_label"
+                class=' mobilelabel8 '>
+                    Suggestions
+                    <br>
+                </div>
+                <div data-role="fieldcontain" class="mobilecheckboxgroup1" id="j_13" dsid="mobilecheckboxgroup6">
+                    <fieldset data-role="controlgroup">
+                        <span dsid="mobilecheckbox28" class="mobilecheckbox1">
+                            <input type="checkbox" name="mobilecheckboxgroup6" id="j_14" tabIndex="1" data-theme="b"
+                            value="Item 1" />
+                            <label id="j_14_label" for="j_14">
+                                Plant a Tree
+                            </label>
+                        </span>
+                        <span dsid="mobilecheckbox29" class="mobilecheckbox2">
+                            <input type="checkbox" name="mobilecheckboxgroup6" id="j_15" data-theme="b" value="Item 2"
+                            />
+                            <label id="j_15_label" for="j_15">
+                                Cut Down on Shower Time
+                            </label>
+                        </span>
+                        <span dsid="mobilecheckbox30" class="mobilecheckbox3">
+                            <input type="checkbox" name="mobilecheckboxgroup6" id="j_16" data-theme="b" value="Item 3"
+                            />
+                            <label id="j_16_label" for="j_16">
+                                Buy Local Groceries
+                            </label>
+                        </span>
+                        <span dsid="mobilecheckbox34" class="mobilecheckbox4">
+                            <input type="checkbox" name="mobilecheckboxgroup6" id="j_17" data-theme="b" value="Item 4"
+                            />
+                            <label id="j_17_label" for="j_17">
+                                Use Reusable Bag
+                            </label>
+                        </span>
+                        <span dsid="mobilecheckbox35" class="mobilecheckbox5">
+                            <input type="checkbox" name="mobilecheckboxgroup6" id="j_18" data-theme="b" value="Item 5"
+                            />
+                            <label id="j_18_label" for="j_18">
+                                Share! Raise awareness.
+                            </label>
+                        </span>
+                    </fieldset>
+                </div>
+            </div>
+            <!-- mobilefooter3 -->
+            <div data-role="footer" data-position="fixed" class="mobilefooter1" name="mobilefooter3"
+            dsid="mobilefooter3" id="j_19" data-theme="b">
+                <!-- mobilenavbar4 -->
+                <div data-role="navbar" id="j_20" name="mobilenavbar4" dsid="mobilenavbar4" class="mobilenavbar1"
+                data-theme="b" style="position: relative;">
+                    <ul>
+                        <!-- surveybutton -->
+                        <li>
+                            <a data-theme='b' data-icon='check' id="j_21" dsid="surveybutton" name="surveybutton">
+                            Survey
+                            </a>
+                        </li>
+                        <!-- resultsbutton -->
+                        <li>
+                            <a data-theme='b' class='ui-btn-active' data-icon='star' id="j_22" dsid="resultsbutton"
+                            name="resultsbutton">
+                            Results
+                            </a>
+                        </li>
+                        <!-- historybutton -->
+                        <li>
+                            <a data-theme='b' data-icon='grid' id="j_23" dsid="historybutton" name="historybutton">
+                            Graph
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

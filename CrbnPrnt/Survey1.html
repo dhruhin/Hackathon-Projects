@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            Survey1
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="files/resources/themes/dark-gray/dark-gray.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.2.0/jquery.mobile.structure-1.2.0.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.indexOf("Android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.2.0/jquery.mobile-1.2.0.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/tiggzi.js">
+        </script>
+        <script type="text/javascript" src="http://flot.googlecode.com/svn/trunk/jquery.flot.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/Points.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/cityTotals.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="Survey1" id="j_127" class="type-interior"
+        data-theme="b" data-add-back-btn="false" data-back-btn-text="Back">
+            <div data-role="header" data-position="fixed" data-theme="b" name="mobileheader2"
+            id="j_129" class=' mobileheader5 '>
+                <h1 dsid="mobileheader2">
+                    Today's Survey
+                </h1>
+                <!-- mobilebutton23 -->
+                <a data-role="button" name="mobilebutton23" dsid="mobilebutton23" class=' mobilebutton7'
+                id='j_130' data-corners='true' data-theme="b" tabIndex="15">
+                My Info
+                </a>
+            </div>
+            <!-- mobilecontainer2 -->
+            <div data-role="content" id="j_131" name="mobilecontainer2" class="mobilecontainer5"
+            dsid="mobilecontainer2" data-theme='b'>
+                <link href="Survey1.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="Survey1.js">
+                </script>
+                <!-- mobilelabel3 -->
+                <div name="mobilelabel3" id="j_132" dsid="mobilelabel3" data-role="tiggr_label"
+                class=' mobilelabel27 '>
+                    Did you carpool/bike/walk instead of driving?
+                </div>
+                <!-- mobileradiogroup5 -->
+                <div data-role="fieldcontain" class="mobileradiogroup13" id="j_133" dsid="mobileradiogroup5">
+                    <fieldset data-role="controlgroup" data-type='horizontal'>
+                        <!-- mobileradiobutton14 -->
+                        <span dsid="mobileradiobutton14" class="mobileradiobutton28">
+                            <input type="radio" name="mobileradiogroup5" id="j_134" style='display:none' tabIndex="12"
+                            data-theme="b" value="Item 1" />
+                            <label id="j_134_label" for="j_134">
+                                Yes
+                            </label>
+                        </span>
+                        <!-- mobileradiobutton26 -->
+                        <span dsid="mobileradiobutton26" class="mobileradiobutton29">
+                            <input type="radio" name="mobileradiogroup5" id="j_135" style='display:none' checked="checked"
+                            data-theme="b" value="Item 2" />
+                            <label id="j_135_label" for="j_135">
+                                No
+                            </label>
+                        </span>
+                    </fieldset>
+                </div>
+                <!-- mobilelabel4 -->
+                <div name="mobilelabel4" id="j_136" dsid="mobilelabel4" data-role="tiggr_label"
+                class=' mobilelabel28 '>
+                    How many miles did you drive - estimation?
+                </div>
+                <!-- miles -->
+                <div data-role="fieldcontain" class="mobiletextinput7 ">
+                    <input type="text" name="miles" dsid="miles" id="j_137" placeholder="0" tabIndex="22"
+                    data-theme="b" class=' mobiletextinput7 ' />
+                </div>
+                <!-- mobilelabel5 -->
+                <div name="mobilelabel5" id="j_138" dsid="mobilelabel5" data-role="tiggr_label"
+                class=' mobilelabel29 '>
+                    Did you remember to off appliances/light at night and when you are out of the house?
+                </div>
+                <!-- mobileradiogroup16 -->
+                <div data-role="fieldcontain" class="mobileradiogroup14" id="j_139" dsid="mobileradiogroup16">
+                    <fieldset data-role="controlgroup">
+                        <!-- mobileradiobutton41 -->
+                        <span dsid="mobileradiobutton41" class="mobileradiobutton30">
+                            <input type="radio" name="mobileradiogroup16" id="j_140" tabIndex="20" data-theme="b"
+                            value="Item 1" />
+                            <label id="j_140_label" for="j_140">
+                                All the time
+                            </label>
+                        </span>
+                        <!-- mobileradiobutton42 -->
+                        <span dsid="mobileradiobutton42" class="mobileradiobutton31">
+                            <input type="radio" name="mobileradiogroup16" id="j_141" data-theme="b" value="Item 2"
+                            />
+                            <label id="j_141_label" for="j_141">
+                                Sometimes
+                            </label>
+                        </span>
+                        <!-- mobileradiobutton43 -->
+                        <span dsid="mobileradiobutton43" class="mobileradiobutton32">
+                            <input type="radio" name="mobileradiogroup16" id="j_142" data-theme="b" value="Item 3"
+                            />
+                            <label id="j_142_label" for="j_142">
+                                Not really
+                            </label>
+                        </span>
+                    </fieldset>
+                </div>
+                <!-- mobilelabel7 -->
+                <div name="mobilelabel7" id="j_143" dsid="mobilelabel7" data-role="tiggr_label"
+                class=' mobilelabel30 '>
+                    How many hours of TV did you watch?
+                </div>
+                <!-- tv -->
+                <div data-role="fieldcontain" class="mobiletextinput8 ">
+                    <input type="text" name="tv" dsid="tv" id="j_144" placeholder="0" tabIndex="23"
+                    data-theme="b" class=' mobiletextinput8 ' />
+                </div>
+                <!-- mobilelabel35 -->
+                <div name="mobilelabel35" id="j_145" dsid="mobilelabel35" data-role="tiggr_label"
+                class=' mobilelabel31 '>
+                    Did you use the washer and dryer today?
+                </div>
+                <!-- mobileradiogroup20 -->
+                <div data-role="fieldcontain" class="mobileradiogroup15" id="j_146" dsid="mobileradiogroup20">
+                    <fieldset data-role="controlgroup" data-type='horizontal'>
+                        <!-- mobileradiobutton48 -->
+                        <span dsid="mobileradiobutton48" class="mobileradiobutton33">
+                            <input type="radio" name="mobileradiogroup20" id="j_147" style='display:none' tabIndex="24"
+                            data-theme="b" value="Item 1" />
+                            <label id="j_147_label" for="j_147">
+                                Yes
+                            </label>
+                        </span>
+                        <!-- mobileradiobutton49 -->
+                        <span dsid="mobileradiobutton49" class="mobileradiobutton34">
+                            <input type="radio" name="mobileradiogroup20" id="j_148" style='display:none' checked="checked"
+                            data-theme="b" value="Item 2" />
+                            <label id="j_148_label" for="j_148">
+                                No
+                            </label>
+                        </span>
+                    </fieldset>
+                </div>
+                <!-- mobilelabel38 -->
+                <div name="mobilelabel38" id="j_149" dsid="mobilelabel38" data-role="tiggr_label"
+                class=' mobilelabel32 '>
+                    Did you recycle any of these today (platic, glass, newspaper, magazine, aluminum)?
+                </div>
+                <!-- mobileradiogroup18 -->
+                <div data-role="fieldcontain" class="mobileradiogroup16" id="j_150" dsid="mobileradiogroup18">
+                    <fieldset data-role="controlgroup" data-type='horizontal'>
+                        <!-- mobileradiobutton48 -->
+                        <span dsid="mobileradiobutton48" class="mobileradiobutton35">
+                            <input type="radio" name="mobileradiogroup18" id="j_151" style='display:none' tabIndex="24"
+                            data-theme="b" value="Item 1" />
+                            <label id="j_151_label" for="j_151">
+                                Yes
+                            </label>
+                        </span>
+                        <!-- mobileradiobutton49 -->
+                        <span dsid="mobileradiobutton49" class="mobileradiobutton36">
+                            <input type="radio" name="mobileradiogroup18" id="j_152" style='display:none' checked="checked"
+                            data-theme="b" value="Item 2" />
+                            <label id="j_152_label" for="j_152">
+                                No
+                            </label>
+                        </span>
+                    </fieldset>
+                </div>
+                <!-- mobilebutton20 -->
+                <a data-role="button" name="mobilebutton20" dsid="mobilebutton20" class=' mobilebutton8'
+                id='j_153' data-corners='true' data-theme="b" tabIndex="11">
+                Submit
+                </a>
+            </div>
+            <!-- mobilefooter2 -->
+            <div data-role="footer" data-position="fixed" class="mobilefooter5" name="mobilefooter2"
+            dsid="mobilefooter2" id="j_154" data-theme="b">
+                <!-- mobilenavbar5 -->
+                <div data-role="navbar" id="j_155" name="mobilenavbar5" dsid="mobilenavbar5" class="mobilenavbar5"
+                data-theme="b" style="position: relative;">
+                    <ul>
+                        <!-- mobilenavbaritem13 -->
+                        <li>
+                            <a data-theme='b' class='ui-btn-active' data-icon='check' id="j_156" dsid="mobilenavbaritem13"
+                            name="mobilenavbaritem13">
+                            Survey
+                            </a>
+                        </li>
+                        <!-- resultsbutton -->
+                        <li>
+                            <a data-theme='b' data-icon='star' id="j_157" dsid="resultsbutton" name="resultsbutton">
+                            Results
+                            </a>
+                        </li>
+                        <!-- historybutton -->
+                        <li>
+                            <a data-theme='b' data-icon='grid' id="j_158" dsid="historybutton" name="historybutton">
+                            Graph
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

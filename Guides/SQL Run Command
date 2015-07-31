@@ -1,0 +1,79 @@
+-- phpMyAdmin SQL Dump
+-- version 3.5.7
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jul 20, 2013 at 04:14 PM
+-- Server version: 5.5.29
+-- PHP Version: 5.4.10
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `autism`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `guides`
+--
+
+CREATE TABLE `guides` (
+  `title` text NOT NULL,
+  `user` text NOT NULL,
+  `guide` text NOT NULL,
+  `pics` text NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `categories` text NOT NULL,
+  `comments` text NOT NULL,
+  `views` int(11) NOT NULL,
+  `description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `guides`
+--
+
+INSERT INTO `guides` (`title`, `user`, `guide`, `pics`, `timestamp`, `categories`, `comments`, `views`, `description`) VALUES
+('sup', 'dhruhin', '', '', '2013-07-20 21:57:55', 'sleep', '', 0, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `request`
+--
+
+CREATE TABLE `request` (
+  `title` text NOT NULL,
+  `user` text NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `username` text NOT NULL,
+  `email` text NOT NULL,
+  `first` text NOT NULL,
+  `last` text NOT NULL,
+  `phone` text NOT NULL,
+  `password` text NOT NULL,
+  `points` int(11) NOT NULL,
+  `guides` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`username`, `email`, `first`, `last`, `phone`, `password`, `points`, `guides`) VALUES
+('dhruhin', 'dhruhin@gmail.com', 'Dhruhin', 'Kurli', '4084645690', '2cfe534aa66900e81f6f20b02826b6132d2df8de', 0, ''),
+('yesh', 'yeshram@gmail.com', 'Yesh', 'Ramesh', '4088387047', '204d1b68ca70c70e17417076588df954f47da0da', 0, ''),
+('vivek', 'vivekkls@gmail.com', 'Vivek', 'Koppuru', '5103863083', '204d1b68ca70c70e17417076588df954f47da0da', 0, '');

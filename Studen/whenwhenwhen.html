@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            whenwhenwhen
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="files/resources/themes/winter/winter.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.2.0/jquery.mobile.structure-1.2.0.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.indexOf("Android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.2.0/jquery.mobile-1.2.0.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery-ui-map/jquery.ui.map.full.min.js">
+        </script>
+        <link href="files/resources/lib/datepicker/jquery.ui.datepicker.mobile.css" rel="stylesheet"
+        type="text/css" />
+        <script type="text/javascript" src="files/resources/lib/datepicker/jQuery.ui.datepicker.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/datepicker/jquery.ui.datepicker.mobile.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/tiggzi.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/Places.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        $(document).bind("mobileinit", function()
+        {
+            $.mobile.page.prototype.options.degradeInputs.date = true;
+        });
+        </script>
+        <div data-role="page" style="min-height:800px;" dsid="whenwhenwhen" id="j_208" class="type-interior"
+        data-theme="c">
+            <div data-role="header" data-position="fixed" data-theme="c" name="mobileheader16"
+            id="j_210" class=' mobileheader10 '>
+                <h1 dsid="mobileheader16">
+                    Date, Time, and Location
+                </h1>
+            </div>
+            <!-- mobilecontainer16 -->
+            <div data-role="content" id="j_211" name="mobilecontainer16" class="mobilecontainer10"
+            dsid="mobilecontainer16" data-theme='c'>
+                <link href="whenwhenwhen.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="whenwhenwhen.js">
+                </script>
+                <!-- now -->
+                <div data-role="fieldcontain" id="j_212" dsid="now" name="now" tiggzitype="object"
+                tiggziclass="datepicker" data-theme="c" class=' mobiledatepicker2 '>
+                    <div class="datePickerControls">
+                        <a title="Open Date Picker" class="datepickeropenbutton ui-input-clear ui-btn ui-body ui-body-c
+                        ui-btn-up-c ui-btn-icon-notext ui-btn-corner-all ui-shadow" href="#" data-theme="c" style="margin-top:3px; vertical-align: middle; display: inline-block;">
+                        <span class="ui-btn-inner ui-btn-corner-all">
+                        <span class="ui-btn-text">Open Date Picker</span>
+                        <span class="ui-icon ui-icon-grid ui-icon-shadow"></span>
+                        </span>
+                        </a>
+                        <div class="inputContainer">
+                            <input type="text" data-theme="c" value="" />
+                        </div>
+                    </div>
+                </div>
+                <!-- mobilespacer10 -->
+                <div id='j_213' dsid="mobilespacer10" class='mobilespacer mobilespacer18'>
+                </div>
+                <!-- mobilelabel48 -->
+                <div name="mobilelabel48" id="j_214" dsid="mobilelabel48" data-role="tiggr_label"
+                class=' mobilelabel46 '>
+                    Time
+                </div>
+                <!-- mobiletextinput24 -->
+                <div data-role="fieldcontain" class="mobiletextinput12 ">
+                    <input type="text" name="mobiletextinput24" dsid="mobiletextinput24" id="j_215"
+                    placeholder="Start Time - End Time" tabIndex="2" data-theme="c" class=' mobiletextinput12 '
+                    />
+                </div>
+                <!-- mobilespacer11 -->
+                <div id='j_216' dsid="mobilespacer11" class='mobilespacer mobilespacer19'>
+                </div>
+                <!-- mobilelabel51 -->
+                <div name="mobilelabel51" id="j_217" dsid="mobilelabel51" data-role="tiggr_label"
+                class=' mobilelabel47 '>
+                    Location
+                </div>
+                <!-- mobiletextinput30 -->
+                <div data-role="fieldcontain" class="mobiletextinput13 ">
+                    <input type="text" name="mobiletextinput30" dsid="mobiletextinput30" id="j_218"
+                    placeholder="Location" tabIndex="6" data-theme="c" class=' mobiletextinput13 ' />
+                </div>
+                <!-- mobilebutton62 -->
+                <a data-role="button" name="mobilebutton62" dsid="mobilebutton62" class=' mobilebutton28'
+                id='j_219' data-theme="c" tabIndex="7">
+                Find
+                </a>
+                <!-- googlemap4 -->
+                <div id='j_220' dsid="googlemap4" name="googlemap4" tiggzitype="object" class='googlemap2'
+                style='width:100%;'>
+                    <img class='googlemap2' src="http://assets1.geocommons.com/d51ab1366bec6a2c4954db979e5921bd4cc140db/images/no_preview_map.png?1311276822"
+                    />
+                </div>
+                <ul data-role="listview" id="j_220_markers" name="googlemap4_markers" dsid="googlemap4_markers"
+                style="display:none">
+                    <!-- marker1 -->
+                    <li id="j_221" name="marker1" dsid="marker1" tiggzitype="marker" rendered="true">
+                        <div id="j_221_infoWindow" name="marker1_infoWindowContent" class='marker2'>
+                            <!-- markeroptions2 -->
+                            <div id="j_222" name="markeroptions2" dsid="markeroptions2" req latitude="" longitude=""
+                            text="Right Here!" address="Los Angeles" show_info="true" style="display:none">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- mobilespacer12 -->
+                <div id='j_223' dsid="mobilespacer12" class='mobilespacer mobilespacer20'>
+                </div>
+                <!-- mobilegrid8 -->
+                <div class="mobilegrid5_wrapper">
+                    <table id="j_224" class="mobilegrid5" dsid="mobilegrid8" name="mobilegrid8" cellpadding=0
+                    cellspacing=0>
+                        <col style="width:33.2%;" />
+                        <col style="width:33.6%;" />
+                        <col style="width:33.2%;" />
+                        <tr class="mobilegrid5_row_0">
+                            <!-- mobilegridcell111 -->
+                            <td id="j_225" name="mobilegridcell111" class="mobilegridcell32" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilebutton53 -->
+                                    <a data-role="button" name="mobilebutton53" dsid="mobilebutton53" class=' mobilebutton29'
+                                    id='j_226' data-icon='arrow-l' data-iconpos='left' data-theme="c" tabIndex="4">
+                                    Back
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell112 -->
+                            <td id="j_227" name="mobilegridcell112" class="mobilegridcell33" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilebutton56 -->
+                                    <a data-role="button" name="mobilebutton56" dsid="mobilebutton56" class=' mobilebutton30'
+                                    id='j_228' data-icon='delete' data-iconpos='left' data-theme="c" tabIndex="5">
+                                    Cancel
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell123 -->
+                            <td id="j_229" name="mobilegridcell123" class="mobilegridcell34" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobilebutton59 -->
+                                    <a data-role="button" name="mobilebutton59" dsid="mobilebutton59" class=' mobilebutton31'
+                                    id='j_230' data-icon='arrow-r' data-iconpos='right' data-theme="c" tabIndex="3">
+                                    Next
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- mobilefooter16 -->
+            <div data-role="footer" data-position="fixed" class="mobilefooter10" name="mobilefooter16"
+            dsid="mobilefooter16" id="j_231" data-theme="c">
+            </div>
+        </div>
+    </body>
+
+</html>

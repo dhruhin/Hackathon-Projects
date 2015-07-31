@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            Graph
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="files/resources/themes/dark-gray/dark-gray.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.2.0/jquery.mobile.structure-1.2.0.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.indexOf("Android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.2.0/jquery.mobile-1.2.0.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/tiggzi.js">
+        </script>
+        <script type="text/javascript" src="http://flot.googlecode.com/svn/trunk/jquery.flot.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/Points.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/cityTotals.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="Graph" id="j_160" class="type-interior"
+        data-theme="b" data-add-back-btn="false" data-back-btn-text="Back">
+            <div data-role="header" data-position="fixed" data-theme="b" name="mobileheader4"
+            id="j_162" class=' mobileheader6 '>
+                <h1 dsid="mobileheader4">
+                    Graph
+                </h1>
+            </div>
+            <!-- mobilecontainer4 -->
+            <div data-role="content" id="j_163" name="mobilecontainer4" class="mobilecontainer6"
+            dsid="mobilecontainer4" data-theme='b'>
+                <link href="Graph.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="Graph.js">
+                </script>
+                <!-- mobilelabel39 -->
+                <div name="mobilelabel39" id="j_164" dsid="mobilelabel39" data-role="tiggr_label"
+                class=' mobilelabel33 '>
+                    This is your performance
+                </div>
+                <!-- mobilepanel1 -->
+                <div name="mobilepanel1" dsid="mobilepanel1" id="j_165" class="mobilepanel1">
+                    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+                    <html>
+                        
+                        <head>
+                            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                            <script language="javascript" type="text/javascript" src="http://flot.googlecode.com/svn/trunk/jquery.flot.js">
+                            </script>
+                            <script type="text/javascript">
+                            $(document).ready(function()
+{
+/*
+  $("p").text("The DOM is now loaded and can be manipulated.");
+    var d1 = [];
+    for (var i = 0; i < 14; i += 0.5)
+        d1.push([i, Math.sin(i)]);
+*/
+
+/*
+    // a null signifies separate line segments
+    var d3 = [[0, 12], [7, 12], null, [7, 2.5], [12, 2.5]];
+    $.plot($("#placeholder"), [ d1, d2, d3 ]);
+*/
+    //    var d2 = [[1, localStorage["EEE"]], [5, localStorage["TTT"]], [9, localStorage["RRR"]]];
+    var d2 = [
+        [1, 35],
+        [3, 35],
+        [5, 55],
+        [7, 57],
+        [9, 60]
+    ];
+
+    $.plot($("#placeholder"), [d2]);
+
+});
+                            </script>
+                        </head>
+                        
+                        <body>
+                            <div id="placeholder" style="width:300px;height:250px;">
+                            </div>
+                        </body>
+                    
+                    </html>
+                </div>
+            </div>
+            <!-- mobilefooter4 -->
+            <div data-role="footer" data-position="fixed" class="mobilefooter6" name="mobilefooter4"
+            dsid="mobilefooter4" id="j_166" data-theme="b">
+                <!-- mobilenavbar8 -->
+                <div data-role="navbar" id="j_167" name="mobilenavbar8" dsid="mobilenavbar8" class="mobilenavbar6"
+                data-theme="b" style="position: relative;">
+                    <ul>
+                        <!-- surveybutton -->
+                        <li>
+                            <a data-theme='b' data-icon='check' id="j_168" dsid="surveybutton" name="surveybutton">
+                            Survey
+                            </a>
+                        </li>
+                        <!-- resultsbutton -->
+                        <li>
+                            <a data-theme='b' data-icon='star' id="j_169" dsid="resultsbutton" name="resultsbutton">
+                            Results
+                            </a>
+                        </li>
+                        <!-- historybutton -->
+                        <li>
+                            <a data-theme='b' class='ui-btn-active' data-icon='grid' id="j_170" dsid="historybutton"
+                            name="historybutton">
+                            Graph
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

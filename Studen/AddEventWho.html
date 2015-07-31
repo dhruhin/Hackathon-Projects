@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            AddEventWho
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="files/resources/themes/winter/winter.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.2.0/jquery.mobile.structure-1.2.0.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.indexOf("Android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.2.0/jquery.mobile-1.2.0.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery-ui-map/jquery.ui.map.full.min.js">
+        </script>
+        <link href="files/resources/lib/datepicker/jquery.ui.datepicker.mobile.css" rel="stylesheet"
+        type="text/css" />
+        <script type="text/javascript" src="files/resources/lib/datepicker/jQuery.ui.datepicker.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/datepicker/jquery.ui.datepicker.mobile.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/tiggzi.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/Places.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        $(document).bind("mobileinit", function()
+        {
+            $.mobile.page.prototype.options.degradeInputs.date = true;
+        });
+        </script>
+        <div data-role="page" style="min-height:800px;" dsid="AddEventWho" id="j_146" class="type-interior"
+        data-theme="c">
+            <div data-role="header" data-position="fixed" data-theme="c" name="mobileheader8"
+            id="j_148" class=' mobileheader7 '>
+                <h1 dsid="mobileheader8">
+                    Antendees
+                </h1>
+            </div>
+            <!-- mobilecontainer8 -->
+            <div data-role="content" id="j_149" name="mobilecontainer8" class="mobilecontainer7"
+            dsid="mobilecontainer8" data-theme='c'>
+                <link href="AddEventWho.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="AddEventWho.js">
+                </script>
+                <!-- mobilelabel13 -->
+                <div name="mobilelabel13" id="j_150" dsid="mobilelabel13" data-role="tiggr_label"
+                class=' mobilelabel36 '>
+                    E-mail Addresses:
+                </div>
+                <!-- mobilelabel14 -->
+                <div name="mobilelabel14" id="j_151" dsid="mobilelabel14" data-role="tiggr_label"
+                class=' mobilelabel37 '>
+                    (seperate with comma)
+                </div>
+                <!-- mobiletextinput16 -->
+                <div data-role="fieldcontain" class="mobiletextinput9 ">
+                    <input type="email" name="mobiletextinput16" dsid="mobiletextinput16" id="j_152"
+                    placeholder="example@gmail.com" tabIndex="2" data-theme="c" class=' mobiletextinput9 '
+                    />
+                </div>
+                <!-- mobilelabel12 -->
+                <div name="mobilelabel12" id="j_153" dsid="mobilelabel12" data-role="tiggr_label"
+                class=' mobilelabel38 '>
+                    Post on Wall
+                </div>
+                <!-- mobiletoggle2 -->
+                <div data-role="fieldcontain" class="mobiletoggle1 ">
+                    <select data-role="slider" name="mobiletoggle2" id="j_154" dsid="mobiletoggle2"
+                    data-theme="c" data-track-theme="c">
+                        <option value="off">
+                            Off
+                        </option>
+                        <option value="on">
+                            On
+                        </option>
+                    </select>
+                </div>
+                <!-- mobilebutton8 -->
+                <a data-role="button" name="mobilebutton8" dsid="mobilebutton8" class=' mobilebutton16'
+                id='j_155' data-inline='true' data-theme="c" tabIndex="3">
+                Create!
+                </a>
+                <!-- mobilebutton6 -->
+                <a data-role="button" name="mobilebutton6" dsid="mobilebutton6" class=' mobilebutton17'
+                id='j_156' data-inline='true' data-theme="c" tabIndex="4">
+                Previous
+                </a>
+                <!-- mobilebutton7 -->
+                <a data-role="button" name="mobilebutton7" dsid="mobilebutton7" class=' mobilebutton18'
+                id='j_157' data-inline='true' data-theme="c" tabIndex="5">
+                Cancel Session
+                </a>
+                <!-- mobilebutton36 -->
+                <a data-role="button" name="mobilebutton36" dsid="mobilebutton36" class=' mobilebutton19'
+                id='j_158' data-icon='arrow-l' data-iconpos='left' data-theme="c" tabIndex="4">
+                Back
+                </a>
+                <!-- mobilebutton38 -->
+                <a data-role="button" name="mobilebutton38" dsid="mobilebutton38" class=' mobilebutton20'
+                id='j_159' data-icon='delete' data-iconpos='left' data-theme="c" tabIndex="5">
+                Cancel
+                </a>
+                <!-- mobilebutton40 -->
+                <a data-role="button" name="mobilebutton40" dsid="mobilebutton40" class=' mobilebutton21'
+                id='j_160' data-theme="c" tabIndex="3">
+                Next
+                </a>
+            </div>
+            <!-- mobilefooter8 -->
+            <div data-role="footer" data-position="fixed" class="mobilefooter7" name="mobilefooter8"
+            dsid="mobilefooter8" id="j_161" data-theme="c">
+            </div>
+        </div>
+    </body>
+
+</html>

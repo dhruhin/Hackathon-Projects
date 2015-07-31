@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            Info
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="files/resources/themes/dark-gray/dark-gray.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.2.0/jquery.mobile.structure-1.2.0.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.indexOf("Android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.2.0/jquery.mobile-1.2.0.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/tiggzi.js">
+        </script>
+        <script type="text/javascript" src="http://flot.googlecode.com/svn/trunk/jquery.flot.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/Points.js">
+        </script>
+        <script type="text/javascript" src="files/views/assets/js/cityTotals.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        </script>
+        <div data-role="page" style="min-height:480px;" dsid="Info" id="j_172" class="type-interior"
+        data-theme="b" data-add-back-btn="false" data-back-btn-text="Back">
+            <div data-role="header" data-position="fixed" data-theme="b" name="mobileheader7"
+            id="j_174" class=' mobileheader7 '>
+                <h1 dsid="mobileheader7">
+                    My Info
+                </h1>
+            </div>
+            <!-- mobilecontainer7 -->
+            <div data-role="content" id="j_175" name="mobilecontainer7" class="mobilecontainer7"
+            dsid="mobilecontainer7" data-theme='b'>
+                <link href="Info.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="Info.js">
+                </script>
+                <!-- mobilelabel57 -->
+                <div name="mobilelabel57" id="j_176" dsid="mobilelabel57" data-role="tiggr_label"
+                class=' mobilelabel34 '>
+                    What is your name?
+                </div>
+                <!-- mobilegrid14 -->
+                <div class="mobilegrid1_wrapper">
+                    <table id="j_177" class="mobilegrid1" dsid="mobilegrid14" name="mobilegrid14" cellpadding=0
+                    cellspacing=0>
+                        <col style="width:50%;" />
+                        <col style="width:50%;" />
+                        <tr class="mobilegrid1_row_0">
+                            <!-- mobilegridcell35 -->
+                            <td id="j_178" name="mobilegridcell35" class="mobilegridcell1" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput2 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput9 ">
+                                        <input type="text" name="mobiletextinput2" dsid="mobiletextinput2" id="j_179" value="First"
+                                        tabIndex="3" data-theme="b" class=' mobiletextinput9 ' />
+                                    </div>
+                                </div>
+                            </td>
+                            <!-- mobilegridcell36 -->
+                            <td id="j_180" name="mobilegridcell36" class="mobilegridcell2" colspan=1 rowspan=1>
+                                <div class="cell-wrapper">
+                                    <!-- mobiletextinput3 -->
+                                    <div data-role="fieldcontain" class="mobiletextinput10 ">
+                                        <input type="text" name="mobiletextinput3" dsid="mobiletextinput3" id="j_181" value="Last"
+                                        tabIndex="4" data-theme="b" class=' mobiletextinput10 ' />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- mobilelabel29 -->
+                <div name="mobilelabel29" id="j_182" dsid="mobilelabel29" data-role="tiggr_label"
+                class=' mobilelabel35 '>
+                    Where do you live?
+                </div>
+                <!-- mobiletextinput8 -->
+                <div data-role="fieldcontain" class="mobiletextinput11 ">
+                    <input type="text" name="mobiletextinput8" dsid="mobiletextinput8" id="j_183" value=""
+                    tabIndex="14" data-theme="b" class=' mobiletextinput11 ' />
+                </div>
+                <!-- mobilelabel30 -->
+                <div name="mobilelabel30" id="j_184" dsid="mobilelabel30" data-role="tiggr_label"
+                class=' mobilelabel36 '>
+                    How many cars do you have?
+                </div>
+                <!-- mobiletextinput9 -->
+                <div data-role="fieldcontain" class="mobiletextinput12 ">
+                    <input type="number" name="mobiletextinput9" dsid="mobiletextinput9" id="j_185"
+                    value="" tabIndex="15" data-theme="b" class=' mobiletextinput12 ' />
+                </div>
+                <!-- mobilelabel21 -->
+                <div name="mobilelabel21" id="j_186" dsid="mobilelabel21" data-role="tiggr_label"
+                class=' mobilelabel37 '>
+                    What is the main type of car you drive?
+                </div>
+                <!-- mobileradiogroup13 -->
+                <div data-role="fieldcontain" class="mobileradiogroup17" id="j_187" dsid="mobileradiogroup13">
+                    <fieldset data-role="controlgroup">
+                        <!-- mobileradiobutton1 -->
+                        <span dsid="mobileradiobutton1" class="mobileradiobutton37">
+                            <input type="radio" name="mobileradiogroup13" id="j_188" tabIndex="1" data-theme="b"
+                            value="Item 1" />
+                            <label id="j_188_label" for="j_188">
+                                Hybrid/Electric Car
+                            </label>
+                        </span>
+                        <!-- mobileradiobutton2 -->
+                        <span dsid="mobileradiobutton2" class="mobileradiobutton38">
+                            <input type="radio" name="mobileradiogroup13" id="j_189" data-theme="b" value="Item 2"
+                            />
+                            <label id="j_189_label" for="j_189">
+                                Sedan
+                            </label>
+                        </span>
+                        <!-- mobileradiobutton3 -->
+                        <span dsid="mobileradiobutton3" class="mobileradiobutton39">
+                            <input type="radio" name="mobileradiogroup13" id="j_190" data-theme="b" value="Item 3"
+                            />
+                            <label id="j_190_label" for="j_190">
+                                Gas Guzzler
+                            </label>
+                        </span>
+                        <!-- mobileradiobutton7 -->
+                        <span dsid="mobileradiobutton7" class="mobileradiobutton40">
+                            <input type="radio" name="mobileradiogroup13" id="j_191" data-theme="b" value="Item 4"
+                            />
+                            <label id="j_191_label" for="j_191">
+                                I Don't Have A Car
+                            </label>
+                        </span>
+                    </fieldset>
+                </div>
+                <!-- mobilelabel28 -->
+                <div name="mobilelabel28" id="j_192" dsid="mobilelabel28" data-role="tiggr_label"
+                class=' mobilelabel38 '>
+                    How many rooms do you have in your house?
+                </div>
+                <!-- mobiletextinput13 -->
+                <div data-role="fieldcontain" class="mobiletextinput13 ">
+                    <input type="number" name="mobiletextinput13" dsid="mobiletextinput13" id="j_193"
+                    value="" tabIndex="18" data-theme="b" class=' mobiletextinput13 ' />
+                </div>
+                <!-- mobilespacer1 -->
+                <div id='j_194' dsid="mobilespacer1" class='mobilespacer mobilespacer1'>
+                </div>
+                <!-- done -->
+                <a data-role="button" name="done" dsid="done" class=' mobilebutton9' id='j_195'
+                data-corners='true' data-theme="b" tabIndex="17">
+                Done
+                </a>
+            </div>
+            <!-- mobilefooter7 -->
+            <div data-role="footer" data-position="fixed" class="mobilefooter7" name="mobilefooter7"
+            dsid="mobilefooter7" id="j_196" data-theme="b">
+            </div>
+        </div>
+    </body>
+
+</html>

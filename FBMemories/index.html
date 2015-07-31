@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+<<<<<<< HEAD
+<link href='http://fonts.googleapis.com/css?family=Raleway:900' rel='stylesheet' type='text/css'>
+    <!-- Add custom CSS here -->
+    <link href="bootstrap/css/full-slider.css" rel="stylesheet">
+    <style>
+p {font-family: 'Raleway', sans-serif;font-size: 22px;}
+</style>
+=======
+
+    <!-- Add custom CSS here -->
+    <link href="bootstrap/css/full-slider.css" rel="stylesheet">
+>>>>>>> 1d03bb878b291a4688829e1cd9cb765488d2dd85
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+
+  </head>
+<div id="fb-root"></div>
+<script>
+var state = 1;
+  // Additional JS functions here
+  google.load('search', '1');
+  var song = "star spangled banner";
+    function OnLoad() {
+
+      // create a search control
+      var searchControl = new google.search.SearchControl();
+
+      // So the results are expanded by default
+      options = new google.search.SearcherOptions();
+      options.setExpandMode(google.search.SearchControl.EXPAND_MODE_OPEN);
+
+      // Create a video searcher and add it to the control
+      searchControl.addSearcher(new google.search.VideoSearch(), options);
+
+      // Draw the control onto the page
+      searchControl.draw(document.getElementById("content"));
+
+      // Search
+      searchControl.execute(song);
+    }
+
+    google.setOnLoadCallback(OnLoad);
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1426290634257300', // App ID
+      channelUrl : 'channel.html', // Channel File
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });
+
+  FB.getLoginStatus(function(response) {
+  if (response.status !== 'connected') {
+    window.location = "login.html";
+  }else
+    loadImages();
+ });
+
+  };
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/all.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+
+    var images, picture_list; 
+  function loadImages(){
+<<<<<<< HEAD
+  FB.api("me?fields=id,name,music,photos.fields(images,name,likes,from)", function(response){images = response;
+=======
+  FB.api("me?fields=id,name,music,photos.fields(images,name,likes)", function(response){images = response;
+>>>>>>> 1d03bb878b291a4688829e1cd9cb765488d2dd85
+    picture_list = images.photos.data;
+  for(var i = 0; i<images.photos.data.length;i++){
+    if (i==0)
+      $("#dataSlides").append("<li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>");
+    else
+      $("#dataSlides").append("<li data-target=\"#myCarousel\" data-slide-to=\""+i+"\"></li>");
+    var caption = "";
+<<<<<<< HEAD
+    if((images.photos.data[i].name)){
+      caption = images.photos.data[i].name;
+      caption += " ("+images.photos.data[i].from.name+" on "+images.photos.data[i].created_time.substring(0,10)+")";
+    }
+    if(i==0)
+      $("#text").text(caption.replace(/[^a-zA-Z0-9\s.?!,#<\-()>:%]/mg,""));
+    if(i==0)
+      $("#populate").append("<div class=\"item active\" rel='"+caption.replace(/[^a-zA-Z0-9\s.?!,#<\-()>:%]/mg,"")+"'><div id='image"+i+"' class=\"fill\" style=\"background-image:url('"+images.photos.data[i].images[0].source+"');background-size:contain;background-repeat: no-repeat;\"></div><div class=\"carousel-caption\"><br/><center><button class='btn-default btn-lg glyphicon glyphicon-play' onclick='return play();'></button> <button class='btn-default btn-lg glyphicon glyphicon-volume-up' onclick='return playMusic();'></button> <button class='btn-default btn-lg glyphicon glyphicon-volume-off' onclick='return stopMusic();'></button></center></div></div>");
+    else
+      $("#populate").append("<div class=\"item\" rel='"+caption.replace(/[^a-zA-Z0-9\s.?!,#<\-()>:%]/mg,"")+"'><div id='image"+i+"' class=\"fill\" style=\"background-image:url('"+images.photos.data[i].images[0].source+"');background-repeat: no-repeat;\"></div><div class=\"carousel-caption\"><br/><center><button class='btn-default btn-lg glyphicon glyphicon-play' onclick='return play();'></button> <button class='btn-default btn-lg glyphicon glyphicon-volume-up' onclick='return playMusic();'></button> <button class='btn-default btn-lg glyphicon glyphicon-volume-off' onclick='return stopMusic();'></button></center></div></div>");
+    //$("#text"+i).text(images.photos.data[i].name);
+    if(i==images.photos.data.length-1)
+      show();
+
+=======
+    if((images.photos.data[i].name))
+      caption = images.photos.data[i].name;
+    if(i==0)
+      $("#text").text(caption.replace(/[^a-zA-Z0-9\s.?!,#:%]/mg,""));
+    if(i==0)
+      $("#populate").append("<div class=\"item active\" rel='"+caption.replace(/[^a-zA-Z0-9\s.?!,#:%]/mg,"")+"'><div id='image"+i+"' class=\"fill\" style=\"background-image:url('"+images.photos.data[i].images[0].source+"');background-size:contain;background-repeat: no-repeat;\"></div><div class=\"carousel-caption\"><br/><button class='btn-primary' onclick='return playMusic();'>Play Music</button><button class='btn-primary' onclick='return stopMusic();'>Stop Music</button></div></div>");
+    else
+      $("#populate").append("<div class=\"item\" rel='"+caption.replace(/[^a-zA-Z0-9\s.?!,#:%]/mg,"")+"'><div id='image"+i+"' class=\"fill\" style=\"background-image:url('"+images.photos.data[i].images[0].source+"');background-size:contain;background-repeat: no-repeat;\"></div><div class=\"carousel-caption\"><br/><button class='btn-primary' onclick='return playMusic();'>Play Music</button><button class='btn-primary' onclick='return stopMusic();'>Stop Music</button></div></div>");
+    //$("#text"+i).text(images.photos.data[i].name);
+    if(i==images.photos.data.length-1)
+      show();
+>>>>>>> 1d03bb878b291a4688829e1cd9cb765488d2dd85
+  }
+  if(images.music)
+    song = images.music.data[0].name;
+  OnLoad();
+  });
+  }
+  function logout () {
+
+    FB.logout(function(response) {
+  // user is now logged out
+});
+
+  }
+
+    function playMusic(){
+      if($( ".gs-image" )[0])
+        $("#test").attr('src', $( ".gs-image" )[0].getAttribute('href').replace('watch?v=',"embed/")+"?autoplay=1");
+    }
+    function stopMusic(){
+      if($( ".gs-image" )[0])
+        $("#test").attr('src', null);
+    }
+    function show(){
+      if(state==1){
+        $("#myCarousel").carousel({
+<<<<<<< HEAD
+          interval: 4000
+        });
+        $('#myCarousel').on('slid.bs.carousel', function () {
+          textS();
+        })
+        $('#myCarousel').trigger('slid');
+=======
+          interval: 3000
+        });
+
+        $('#myCarousel').on('slid.bs.carousel', function () {
+          updateText();
+        })
+>>>>>>> 1d03bb878b291a4688829e1cd9cb765488d2dd85
+        state = 0;
+      }else{
+        $("#myCarousel").carousel('pause');
+        state = 1;
+      }
+    }
+<<<<<<< HEAD
+    function play(){
+      $("#myCarousel").carousel('cycle');
+    }
+    function updateText(){
+      var x = $('#myCarousel .active')[$('#myCarousel .active').length-1].getAttribute('rel');
+      $("#text").text(x);
+    }
+    function textS(){
+      var x = $('#myCarousel .active')[$('#myCarousel .active').length-1].getAttribute('rel');
+      if(x==""){
+        $("#myCarousel").animate({ 
+              'padding-right' : '1%',
+              'padding-left' : '1%',
+            }, "slow", function(){
+          updateText();});
+
+      }else{
+        $("#myCarousel").animate({ 
+              'padding-right' : '1%',
+              'padding-left' : '40%',
+            }, "slow", function(){
+          updateText();});
+      }
+    }
+=======
+    function updateText(){
+      var x = $('#myCarousel .active')[0].getAttribute('rel');
+      $("#text").text(x);
+    }
+>>>>>>> 1d03bb878b291a4688829e1cd9cb765488d2dd85
+
+</script>
+
+  <body background="back.png">
+    <iframe id="test" width="0" height="0" allowfullscreen hidden></iframe>
+
+<<<<<<< HEAD
+    <div style='padding-top:1%;padding-bottom:1%;padding-right:1%;padding-left:1%;'id="myCarousel" class="carousel slide">
+      <!-- Indicators -->
+
+      <p id="text" style=" vertical-align:middle; top:0; bottom:0; left:5%; right:0;
+      margin:auto; height:240px; display:inline; position:absolute; padding-right:105%"></p>
+=======
+    <div style='padding-top:1%;padding-bottom:1%;padding-right:1%;padding-left:50%;'id="myCarousel" class="carousel slide">
+      <!-- Indicators -->
+
+      <p id="text" style=" vertical-align:middle; top:0; bottom:0; left:10%; right:0;
+      margin:auto; height:240px; display:inline; position:absolute; padding-right:125%"></p>
+>>>>>>> 1d03bb878b291a4688829e1cd9cb765488d2dd85
+        <ol id="dataSlides" class="carousel-indicators">
+        </ol>
+
+        <!-- Wrapper for slides -->
+<<<<<<< HEAD
+
+=======
+>>>>>>> 1d03bb878b291a4688829e1cd9cb765488d2dd85
+        <div id="populate" class="carousel-inner">
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="icon-next"></span>
+        </a>
+    </div>
+
+    <div id="content" hidden></div>
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Make sure to add jQuery - download the most recent version at http://jquery.com/ -->
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+  </body>
+</html>

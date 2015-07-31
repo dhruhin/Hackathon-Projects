@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            Home
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"
+        />
+        <link href="files/resources/themes/winter/winter.css" rel="stylesheet" />
+        <link href="files/resources/lib/jquerymobile/1.2.0/jquery.mobile.structure-1.2.0.css"
+        rel="stylesheet" />
+        <script type="text/javascript" src="files/resources/lib/store/json2.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery/jquery-1.8.2.js">
+        </script>
+        <script type="text/javascript">
+                    $(document).bind("mobileinit", function()
+            {
+                if (navigator.userAgent.indexOf("Android") != -1)
+                {
+                    $.mobile.defaultPageTransition = 'none';
+                    $.mobile.defaultDialogTransition = 'none';
+                }
+            });
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquerymobile/1.2.0/jquery.mobile-1.2.0.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/mobilebase.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/event/customEventHandler.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/sha1.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/oauth.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/contexts.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jsonpath.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/jquery.xml2json.min.js">
+        </script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/jquery-ui-map/jquery.ui.map.full.min.js">
+        </script>
+        <link href="files/resources/lib/datepicker/jquery.ui.datepicker.mobile.css" rel="stylesheet"
+        type="text/css" />
+        <script type="text/javascript" src="files/resources/lib/datepicker/jQuery.ui.datepicker.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/datepicker/jquery.ui.datepicker.mobile.js">
+        </script>
+        <script type="text/javascript" src="files/resources/lib/base/tiggzi.js">
+        </script>
+        <link href="files/resources/css/mobilebase.css" rel="stylesheet" type="text/css"
+        />
+        <script type="text/javascript" src="files/views/assets/js/Places.js">
+        </script>
+    </head>
+    
+    <body>
+        <script language="JavaScript" type="text/javascript">
+                if (navigator.userAgent.match(/iP/i))
+        {
+            $(window).bind('orientationchange', function(event)
+            {
+                $('meta[name="viewport"]').attr('content', 'initial-scale=1.0,maximum-scale=1.0, ' + ((window.orientation == 90 || window.orientation == -90 || window.orientation == 270) ? "height=device-width,width=device-height" : "height=device-height,width=device-width"));
+            }).trigger('orientationchange');
+        }
+        $(document).bind("mobileinit", function()
+        {
+            $.mobile.page.prototype.options.degradeInputs.date = true;
+        });
+        </script>
+        <div data-role="page" style="min-height:800px;" dsid="Home" id="j_244" class="type-interior"
+        data-theme="c">
+            <div data-role="header" data-position="fixed" data-theme="c" name="mobileheader2"
+            id="j_246" class=' mobileheader12 '>
+                <h1 dsid="mobileheader2">
+                    Home
+                </h1>
+            </div>
+            <!-- mobilecontainer2 -->
+            <div data-role="content" id="j_247" name="mobilecontainer2" class="mobilecontainer12"
+            dsid="mobilecontainer2" data-theme='c'>
+                <link href="Home.css" rel="stylesheet" type="text/css" />
+                <script type="text/javascript" src="Home.js">
+                </script>
+                <!-- mobileimage11 -->
+                <img class="mobileimage2" src="files/views/assets/image/studen%2Blogo.jpg" id="j_248"
+                dsid="mobileimage11" name="mobileimage11" />
+                <!-- mobilelabel3 -->
+                <div name="mobilelabel3" id="j_249" dsid="mobilelabel3" data-role="tiggr_label"
+                class=' mobilelabel48 '>
+                    Current Sessions
+                </div>
+                <!-- mobilelabel3 -->
+                <div name="mobilelabel3" id="j_250" dsid="mobilelabel3" data-role="tiggr_label"
+                class=' mobilelabel49 '>
+                    Created by Me
+                </div>
+                <div data-role="fieldcontain" class="mobilecheckboxgroup1" id="j_251" dsid="mobilecheckboxgroup2">
+                    <fieldset data-role="controlgroup">
+                        <span dsid="mobilecheckbox6" class="mobilecheckbox1">
+                            <input type="checkbox" name="mobilecheckboxgroup2" id="j_252" checked="checked"
+                            tabIndex="5" data-theme="c" value="Item 1" />
+                            <label id="j_252_label" for="j_252">
+                                United States History
+                            </label>
+                        </span>
+                        <span dsid="mobilecheckbox7" class="mobilecheckbox2">
+                            <input type="checkbox" name="mobilecheckboxgroup2" id="j_253" data-theme="c" value="Item 2"
+                            />
+                            <label id="j_253_label" for="j_253">
+                                Farenheit 451 Study Guide
+                            </label>
+                        </span>
+                        <span dsid="mobilecheckbox8" class="mobilecheckbox3">
+                            <input type="checkbox" name="mobilecheckboxgroup2" id="j_254" checked="checked"
+                            data-theme="c" value="Item 3" />
+                            <label id="j_254_label" for="j_254">
+                                Math Practice Final
+                            </label>
+                        </span>
+                    </fieldset>
+                </div>
+                <!-- mobilelabel2 -->
+                <div name="mobilelabel2" id="j_255" dsid="mobilelabel2" data-role="tiggr_label"
+                class=' mobilelabel50 '>
+                    Shared with Me
+                </div>
+                <div data-role="fieldcontain" class="mobilecheckboxgroup2" id="j_256" dsid="mobilecheckboxgroup1">
+                    <fieldset data-role="controlgroup">
+                        <span dsid="mobilecheckbox1" class="mobilecheckbox4">
+                            <input type="checkbox" name="mobilecheckboxgroup1" id="j_257" checked="checked"
+                            tabIndex="2" data-theme="c" value="Item 1" />
+                            <label id="j_257_label" for="j_257">
+                                Chemistry Finals Review
+                            </label>
+                        </span>
+                        <span dsid="mobilecheckbox6" class="mobilecheckbox5">
+                            <input type="checkbox" name="mobilecheckboxgroup1" id="j_258" checked="checked"
+                            data-theme="c" value="Item 2" />
+                            <label id="j_258_label" for="j_258">
+                                History Presentation Practice
+                            </label>
+                        </span>
+                        <span dsid="mobilecheckbox7" class="mobilecheckbox6">
+                            <input type="checkbox" name="mobilecheckboxgroup1" id="j_259" data-theme="c" value="Item 3"
+                            />
+                            <label id="j_259_label" for="j_259">
+                                Math HW Revision
+                            </label>
+                        </span>
+                        <span dsid="mobilecheckbox8" class="mobilecheckbox7">
+                            <input type="checkbox" name="mobilecheckboxgroup1" id="j_260" checked="checked"
+                            data-theme="c" value="Item 4" />
+                            <label id="j_260_label" for="j_260">
+                                Biology Lab
+                            </label>
+                        </span>
+                        <span dsid="mobilecheckbox9" class="mobilecheckbox8">
+                            <input type="checkbox" name="mobilecheckboxgroup1" id="j_261" data-theme="c" value="Item 5"
+                            />
+                            <label id="j_261_label" for="j_261">
+                                Computer Science Project
+                            </label>
+                        </span>
+                    </fieldset>
+                </div>
+                <!-- mobilespacer12 -->
+                <div id='j_262' dsid="mobilespacer12" class='mobilespacer mobilespacer22'>
+                </div>
+                <!-- mobilespacer22 -->
+                <div id='j_263' dsid="mobilespacer22" class='mobilespacer mobilespacer23'>
+                </div>
+                <!-- mobilebutton4 -->
+                <a data-role="button" name="mobilebutton4" dsid="mobilebutton4" class=' mobilebutton34'
+                id='j_264' data-theme="c" tabIndex="3">
+                Create New Session
+                </a>
+                <!-- mobilebutton10 -->
+                <a data-role="button" name="mobilebutton10" dsid="mobilebutton10" class=' mobilebutton35'
+                id='j_265' data-theme="c" tabIndex="4">
+                Sign Out
+                </a>
+            </div>
+            <!-- mobilefooter2 -->
+            <div data-role="footer" data-position="fixed" class="mobilefooter12" name="mobilefooter2"
+            dsid="mobilefooter2" id="j_266" data-theme="c">
+            </div>
+        </div>
+    </body>
+
+</html>
